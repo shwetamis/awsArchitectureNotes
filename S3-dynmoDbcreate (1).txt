@@ -1,0 +1,48 @@
+lab5db.chpzagtywkre.us-west-2.rds.amazonaws.com:3306
+
+
+52.88.21.189
+
+
+Lab6ELB-635859372.us-west-2.elb.amazonaws.com
+
+
+
+https://300211318833.signin.aws.amazon.com/console
+
+
+
+chmod 400 C:/Users/student/Downloads/qwikLABS-L666-133639.pem
+
+ssh –i <path and name of pem> ec2-user@<Public IP>
+
+C:/Users/student/Downloads/qwikLABS-L666-133639.pem
+
+aws s3 ls shwetabuckettest --region us-west-2
+aws s3 ls <bucket_name> --region <region>
+cd /home/ec2-user/lab1src
+
+aws s3 cp /home/ec2-user/lab1src/jquery/ s3://shwetabuckettest/jquery/ --recursive --acl public-read --region us-west-2
+
+
+
+aws s3 cp /home/ec2-user/lab1src/images/ s3://shwetabuckettest/images/ --recursive --acl public-read --region us-west-2
+
+aws s3 ls s3://shwetabuckettest/ --region us-west-2 --recursive
+
+sudo sed -i '2s/%region%/us-west-2/g' /var/www/html/*.php
+sudo sed -i '3s/%bucket%/shwetabuckettest/g' /var/www/html/*.php
+
+
+aws dynamodb batch-write-item --request-items file:///home/ec2-user/lab1src/scripts/services1.json --region us-west-2
+aws dynamodb batch-write-item --request-items file:///home/ec2-user/lab1src/scripts/services2.json --region us-west-2
+aws dynamodb batch-write-item --request-items file:///home/ec2-user/lab1src/scripts/services3.json --region us-west-2
+
+
+
+aws dynamodb scan --Name AWS-Services --region us-west-2
+
+
+aws dynamodb scan --table-name AWS-Services --region us-west-2
+
+ssh –i C:/Users/student/Downloads/qwikLABS-L609-134166.pem ec2-user@52.43.171.5
